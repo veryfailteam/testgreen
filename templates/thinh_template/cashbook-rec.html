@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cashbook - Receivables | Nha khoa GTGT | Cloud Dental ERP v1.0.3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://use.fontawesome.com/8acd7bac45.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../../ERP/static/css/style.css">
+</head>
+<body>
+    <header>
+        <!--- First menu -->
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light bg-white" style="max-height: 50px;">
+                <a class="navbar-brand" href="#" style="color: #2196f3">Nha khoa GTGT <sup>CN Phạm Văn Hai</sup></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"   aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="omni-channel.html">Omni-Channel <sup>TM</sup></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="calendar.html">Calendar</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="cashbook.html">Cash Book</a>
+                        </li>
+                        <!--
+                        <li class="nav-item">
+                            <a class="nav-link" href="inventory.html">Inventory</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="inventory.html">HR</a>
+                        </li>
+                    -->
+                    </ul>
+                    <ul class="navbar-text">
+                        <li class="nav-item">
+                            <a href="">
+                            <img src="images/messenger_icon.png" style="height: 30px;" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="">
+                            <img src="images/ring_icon.png" style="height: 30px;" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="">
+                            <img src="images/user_icon.png" style="height: 30px;" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!--- Second menu -->
+        <div class="container-fluid" id="second_menu">
+            <div class="container">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="cashbook-rec.html">Receivables (phải thu)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cashbook-lia.html">Liabilities (phải trả)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cashbook-rep.html">Report</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cashbook-acm.html">Account management</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--- Main body -->
+    <div class="container" style="margin-top: 10px; margin-bottom: 0px;">
+        <div class="alert alert-warning alert-dismissable fade show" style="margin-bottom: 0px;">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Chỉ dẫn: </strong>Khách ra khỏi phòng, nhớ kiểm tra để thu tiền Xuân nhé
+        </div>
+    </div>
+    <div class="container" id="cashbook-content" style="margin-top: 0px;">
+        <div class="container">
+            <div class="row" id="cashbook-rec-content-header">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <b>Total revenues:</b><span>&nbsp;900,000 <sup>vnđ</sup></span>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding-top: 10px;">
+                            <b>Filter by:</b>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            <select class="form-control custom-select" style="display: inline;">
+                                <option>Today (default)</option>
+                                <option>This week</option>
+                                <option>This month</option>
+                                <option>Previous 3 months</option>
+                                <option>Previous 6 months</option>
+                                <option>Previous 1 year</option>
+                                <option>All times</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="cashbook-rec-content-detail">
+                <table class="table table-responsive-md table-striped table-hover" style="border-bottom: 1px solid #dfdfdf">
+                    <thead>
+                       <tr>
+                            <th style="padding-left: 8px; min-width: 40px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Receipt vch #</th>
+                            <th style="padding-left: 0px; width: 90px;">Amount</th>
+                            <th style="padding-left: 0px; min-width: 130px;">Record date/time</th>
+                            <th style="padding-left: 0px; min-width: 40px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">For invoice #</th>
+                            <th style="padding-left: 0px; min-width: 100px; max-width: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Paid by</th>
+                            <th style="padding-left: 0px; min-width: 30px; max-width: 60px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Receiving acc</th>
+                            <th style="padding-left: 0px; min-width: 80px; max-width: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Record by</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding-left: 8px; min-width: 80px;">RV-00005</td>
+                            <td style="padding-left: 0px; min-width: 80px;">300,000 <sup>vnđ</sup></td>
+                            <td style="padding-left: 0px; width: 80px;">08/11/2017 11:45</td>
+                            <td style="padding-left: 0px; min-width: 40px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href=""> INV-00001</a></td>
+                            <td style="padding-left: 0px; min-width: 100px; max-width: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Ngô Bảo Châu</td>
+                            <td style="padding-left: 0px; min-width: 30px; max-width: 60px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href="">-</a></td>
+                            <td style="padding-left: 0px; min-width: 80px; max-width: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">-</td>
+                            <td><a class="btn btn-primary" href="" style="width: 120px;" data-toggle="modal" data-target="#cashbook-rec-modal-record" >Record payment</a></td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 8px; min-width: 80px;">RV-00002</td>
+                            <td style="padding-left: 0px; min-width: 80px;">300,000 <sup>vnđ</sup></td>
+                            <td style="padding-left: 0px; width: 80px;">08/11/2017 11:45</td>
+                            <td style="padding-left: 0px; min-width: 40px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href=""> INV-00002</a></td>
+                            <td style="padding-left: 0px; min-width: 80px; max-width: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">David Joe</td>
+                            <td style="padding-left: 0px; min-width: 20px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href="">Quỹ tiền mặt</a></td>
+                            <td style="padding-left: 0px; min-width: 80px; max-width: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Em tên Chi</td>
+                            <td><a class="btn btn-light" style="width: 120px; color: #2196f3;" data-toggle="tooltip" title="Sẽ mở một trang mới để hiển thị chi tiết ">Go to invoice</a></td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 8px; min-width: 80px;">RV-00001</td>
+                            <td style="padding-left: 0px; min-width: 80px;">300,000 <sup>vnđ</sup></td>
+                            <td style="padding-left: 0px; width: 80px;">08/11/2017 11:45</td>
+                            <td style="padding-left: 0px; min-width: 40px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href=""> INV-00001 *</a></td>
+                            <td style="padding-left: 0px; min-width: 80px; max-width: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Ngô Bảo Châu</td>
+                            <td style="padding-left: 0px; min-width: 20px; max-width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a href="">ACB</a></td>
+                            <td style="padding-left: 0px; min-width: 80px; max-width: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Em tên Chi</td>
+                            <td><a class="btn btn-light" style="width: 120px; color: #2196f3;" data-toggle="tooltip" title="Sẽ mở một trang mới để hiển thị chi tiết ">Go to invoice</a></td>
+                        </tr>
+                    </tbody>
+                </table><br/>
+                <p>*: Là hoá đơn chưa thanh toán hết (tổng tiền của các RV đã trả =< tổng tiền hoá đơn)</p>
+            </div>
+        </div>
+        <div class="container">
+            <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </div>
+    </div><br/>
+    <!-- Cashbook modal new -->
+        <div class="modal" id="cashbook-rec-modal-record">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title">Create new <strong style="color: tomato;">payment record</strong></h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="cashbook-lia-modal-new-body">
+                        <div class="row container-fluid">
+                            <div class="col-lg-6 col-md-6 col-sm-6" id="cashbook-lia-modal-new-body-lc">
+                                <div class="row" style="background-color: #d1ecf1; border-left: 6px solid #0c5460; padding: 10px; color: #0c5460">
+                                    <span>Payment information</span>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group mb-2 mb-sm-0">
+                                        <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                        <input type="text" class="form-control" style="" placeholder="RV-00005" disabled>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group mb-2 mb-sm-0">
+                                        <div class="input-group-addon"><i class="fa fa-money"></i></div>
+                                        <input type="text" class="form-control" placeholder="300,000                                                 (vnđ)" disabled>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group mb-2 mb-sm-0">
+                                        <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                        <input type="text" class="form-control" style="" placeholder="Ngô Bảo Châu" disabled>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group mb-2 mb-sm-0">
+                                        <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
+                                        <select class="form-control custom-select" >
+                                        <option selected>Receiving account? *</option>
+                                        <option value="1">Cash-00001 (Xuân tiểu thư)</option>
+                                        <option value="2">Not permited</option>
+                                        <option value="3">Chỉ được thu tiền vào TK mình qly (acc manager)</option>
+                                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6" id="cashbook-lia-modal-new-body-rc">
+                                <div class="row" style="background-color: #d1ecf1; border-left: 6px solid #0c5460; padding: 10px; color: #0c5460">
+                                    <span>E-invoice</span>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group mb-2 mb-sm-0">
+                                        <div class="input-group-addon"><i class="fa fa-code"></i></div>
+                                        <input type="text" class="form-control" placeholder="Enter email to receive E-invoice">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container" style="width: 90%">
+                            <textarea class="form-control" placeholder="Write your note.."></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    <footer id="main-footer">
+        <a>Cloud Dental CRM v.1.0.3 (alpha 1) © 2017</a>
+    </footer>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    </script>
+</body>
+</html>

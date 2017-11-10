@@ -1,0 +1,62 @@
+{% extends 'clinic/base.html' %}
+
+
+{%block main-body%}
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light bg-white" style="max-height: 50px;">
+                <a class="navbar-brand" href="#" style="color: #2196f3">Nha khoa GTGT <sup>CN Phạm Văn Hai</sup></a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'clinic:CRM-DentalClinic-Overview' %}">Messenger CRM <sup>TM</sup></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'clinic:calendar-index' %}">Calendar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cashbook.html">Cash Book</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="{% url 'clinic:inventory-index' %}">Inventory</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'clinic:hr-index' %}">HR</a>
+                        </li> -->
+                    </ul>
+                    <ul class="navbar-text">
+                        <li class="nav-item">
+                            <a href="" class="text-primary">
+                                <i class="fa fa-commenting" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="text-primary">
+                                <i class="fa fa-bell-o" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item" >
+                            <a href="" style="font-size: 25px !important; color: tomato">
+                                <i class="fa fa-user-circle" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--- Main menu end -->
+
+    <!--- Second menu and main body start -->
+    <div>
+        {% block second-menu%}
+
+        {% endblock %}
+    </div>
+    <!--- Second menu and main body end -->
+
+
+{%endblock%}

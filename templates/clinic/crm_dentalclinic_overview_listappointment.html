@@ -1,0 +1,46 @@
+<table class="table table-striped" style="margin-top: -1px;">
+    <thead>
+        <tr>
+            <th scope="col">Appointment date</th>
+            <th scope="col">Doctor</th>
+            <th scope="col">Treatment name</th>
+            <th scope="col">Task list</th>
+            <th scope="col">Notes</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in lstAppointment %}
+            <tr>
+                <td>{{item.date}} {{item.time}}</td>
+                <td>{{item.assign_name}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.content}}</td>
+                <td>{{item.note}}</td>
+                <td>
+                    {% if item.status == constant_key.APPOINTMENT_STATUS_ACTIVE and user_role != constant_key.ROLE_RECEPTION %}
+                        <a class="btn btn-primary" href="">Done</a>
+                        <!-- <a class="btn btn-light" href="">Edit</a> -->
+                    {% elif item.status == constant_key.APPOINTMENT_STATUS_ACTIVE %}
+                        <a class="btn btn-primary" href="">View</a>
+                    {% elif item.status == constant_key.APPOINTMENT_STATUS_CHECKED and user_role == constant_key.ROLE_RECEPTION %}
+                        <a class="btn btn-primary" href="">View</a>
+                    {% elif item.status == constant_key.APPOINTMENT_STATUS_CHECKED%}
+                        <a class="btn btn-primary" href="">Active</a>
+                        <a class="btn btn-primary" href="">View</a>
+                    {% elif item.status == constant_key.APPOINTMENT_STATUS_ON_WAY%}
+                        <a class="btn btn-primary" href="">Checked</a>
+                        <a class="btn btn-primary" href="">Edit</a>
+                    {% elif item.status == constant_key.APPOINTMENT_STATUS_BOOKED%}
+                        <a class="btn btn-primary" href="">On way</a>
+                        <a class="btn btn-primary" href="">Edit</a>
+                    {% elif item.status == constant_key.APPOINTMENT_STATUS_FOLLOW %}
+                        <a class="btn btn-primary" href="">Confirm</a>
+                    {% elif item.status == constant_key.APPOINTMENT_STATUS_DONE %}
+                        <a class="btn btn-primary" href="">View</a>
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

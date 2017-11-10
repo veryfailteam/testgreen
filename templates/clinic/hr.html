@@ -1,0 +1,68 @@
+{% extends 'clinic/base.html' %}
+
+
+{%block main-body%}
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light bg-white" >
+                <a class="navbar-brand" href="#">LOGO</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbars-menu"    aria-controls="navbars-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{% url 'clinic:CRM-DentalClinic-Overview' %}">Messenger CRM <sup>TM</sup></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{% url 'clinic:calendar-index' %}">Calendar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'clinic:inventory-index' %}">Inventory</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'clinic:hr-index' %}">HR</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-text">
+                        <li class="nav-item">
+                            <a href="" class="text-primary">
+                                <i class="fa fa-commenting" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="text-primary">
+                                <i class="fa fa-bell-o" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="text-primary">
+                                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--- Main menu end -->
+
+    <!--- Menu Second start -->
+    <div class="container-fluid" id="menu-second">
+        <div class="container">
+            {% block second-menu%}
+
+            {% endblock %}
+        </div>
+    </div>
+    <!--- Menu Second end -->
+
+    <!--- Main body -->
+    <div class="container-fluid" id="main-body">
+        <div class="row">
+            {% block body %}
+
+            {% endblock %}
+        </div>
+    </div>
+{%endblock%}

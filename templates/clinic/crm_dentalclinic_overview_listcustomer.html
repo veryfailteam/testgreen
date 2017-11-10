@@ -1,0 +1,75 @@
+<nav id="appointment-list" class="nav flex-column">
+    {% for customer in lstCusToday%}
+        {% if forloop.counter == 1 %}
+        <a class="nav-link active" href="#" name="{{customer.customer_id}}">
+        {% else %}
+        <a class="nav-link" href="#"  name="{{customer.customer_id}}">
+        {% endif %}
+            <span style="float: left;">
+                <b>{{customer.customer_name}}</b><br/>
+                <p style="margin-bottom: 0;">{{customer.customer_phone_number}}</p>
+            </span>
+            <span style="float: right;text-align: right;">
+                <b>{{customer.appointment_time}}</b>
+                {% if customer.appointment_status == constant_key.APPOINTMENT_STATUS_PENDING_PAYMENT%}
+                    <p class="status-pendingpayment">
+                        Pending payment
+                   </p>
+                {% elif customer.appointment_status == constant_key.APPOINTMENT_STATUS_ACTIVE%}
+                    <p class="status-active">
+                       Active
+                    </p>
+                {% elif customer.appointment_status == constant_key.APPOINTMENT_STATUS_CHECKED%}
+                    <p class="status-checked">
+                       Checked
+                    </p>
+                {% elif customer.appointment_status == constant_key.APPOINTMENT_STATUS_ON_WAY%}
+                    <p class="status-onway">
+                       On way
+                    </p>
+                {% elif customer.appointment_status == constant_key.APPOINTMENT_STATUS_BOOKED%}
+                    <p class="status-booked">
+                       Booked
+                    </p>
+                {% elif customer.appointment_status == constant_key.APPOINTMENT_STATUS_FOLLOW%}
+                    <p class="status-follow">
+                       Booked
+                    </p>
+                {% else %}
+                    <p class="status-done">
+                       Done
+                    </p>
+                {% endif %}
+            </span>
+        </a>
+    {% endfor %}
+    <!-- <a class="nav-link" href="#">
+        <span style="float: left;">
+            <b>Ms. Cao Kỳ Duyên</b><br/>
+            <p style="margin-bottom: 0;">0123 456 789</p>
+        </span>
+        <span style="float: right;text-align: right;">
+            <b>12:03</b>
+            <p style="margin-bottom: 0;color: #5cb85c;">On way</p>
+        </span>
+    </a> -->
+</nav>
+<script type="text/javascript">
+    $("#appointment-list a").on("click", function(){
+       $("#appointment-list").find(".active").removeClass("active");
+       $(this).addClass("active");
+    });
+
+    $("#appointment-list a").on("click", function(){
+        $.ajax({
+            url: 'get_appointment_schedule/',
+            data: {
+                'customer_id': this.name
+            },
+            dataType: 'html',
+            success: function (data) {
+                    document.getElementById("lstAppointment").innerHTML = data
+                }
+        });
+    });
+</script>

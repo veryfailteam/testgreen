@@ -1,0 +1,32 @@
+{% extends 'clinic/crm.html' %}
+
+{% block second-menu%}
+    <div class="container-fluid" id="menu-second">
+        <div class="container">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'clinic:CRM-DentalClinic-Overview' %}">Dental Clinic</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'clinic:CRM-OpenChannel-Overview' %}">Open channel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'clinic:CRM-ContactCenter-Overview' %}">Contact center</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'clinic:CRM-OrderManagement-Overview' %}">Order management</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!--- Main body -->
+    <div class="container-fluid" id="main-body">
+        <div class="row">
+            {% block body %}
+
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}

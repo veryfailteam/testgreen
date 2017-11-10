@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Omni-channel - Patient | Nha khoa GTGT | Cloud Dental ERP v1.0.3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://use.fontawesome.com/8acd7bac45.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../../ERP/static/css/style.css">
+</head>
+<body>
+    <header>
+        <!--- First menu -->
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light bg-white" style="max-height: 50px;">
+                <a class="navbar-brand" href="#" style="color: #2196f3">Nha khoa GTGT <sup>CN Phạm Văn Hai</sup></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="omni-channel.html">Omni-Channel <sup>TM</sup></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="calendar.html">Calendar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cashbook-rec.html">Cash Book</a>
+                        </li>
+                        <!--
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Inventory</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Human Resource</a>
+                        </li>
+                    -->
+                    </ul>
+                    <ul class="navbar-text">
+                        <li class="nav-item">
+                            <a href="">
+                            <img src="images/messenger_icon.png" style="height: 30px;" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="">
+                            <img src="images/ring_icon.png" style="height: 30px;" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="">
+                            <img src="images/user_icon.png" style="height: 30px;" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!--- Second menu -->
+        <div class="container-fluid" id="second_menu">
+            <div class="container">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Dental Clinic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Center</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Open Channel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Order Management</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--- Main body -->
+    <div class="container-fluid" id="patient-content">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="row">
+                    <div class="row sidebar-header">
+                        <div class="col-lg-2 col-md-2 col-sm-2">
+                            <img src="images/user_avatar.png" style="padding-top: 15px;">
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8" style="margin-top: 10px; white-space: nowrap; width: 120px; overflow: hidden; text-overflow: ellipsis;">
+                           <b style="margin-top: 15px;"> Mr. Tên em dài quá (26)</b><br/>
+                           <p>Implant X</p>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2">
+                            <a href="abc.com">
+                                <i class="fa fa-sign-in" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <nav class="nav flex-column sidebar-detail">
+                        <a class="nav-link" href="omni-dental-patient-med.html" >
+                           <i class="fa fa-heart" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;Prehistory & Medical History <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                        <a class="nav-link" href="omni-dental-patient-cli.html">
+                           <i class="fa fa-certificate" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Clinical Examination <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                        <a class="nav-link" href="omni-dental-patient-dia.html">
+                           <i class="fa fa-line-chart" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;Diagnosis<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                        <a class="nav-link" href="omni-dental-patient-tre.html">
+                           <i class="fa fa-puzzle-piece" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;Treatment Plan & Enforcement <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                        <a class="nav-link" href="omni-dental-patient-inv.html">
+                           <i class="fa fa-file" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Invoice <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                        <a class="nav-link" href="omni-dental-patient-pre.html">
+                           <i class="fa fa-medkit" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Prescription <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                        <a class="nav-link" href="omni-dental-patient-doc.html">
+                           <i class="fa fa-database" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Document & Data storage <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                        <a class="nav-link active" href="omni-dental-patient-app.html">
+                            <i class="fa fa-calendar" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Appointment Schedule <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                        <!-- Để cân nhắc làm sau vì trùng với các tab khác
+                        <a class="nav-link" href="#">
+                           <i class="fa fa-info-circle" aria-hidden="true" style="float: left;"></i>&nbsp;&nbsp;&nbsp;Personal information <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a> -->
+                    </nav>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9" style="border-left: 1px solid #dfdfdf;">
+                <div class="row content-header">
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                        <b style="white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Patient Appointment Schedule</b>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-7">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-2" style="padding-top: 2px;">
+                                <a class="btn btn-primary" data-toggle="modal" data-target="#omni-dental-patient-app-modal-new">+ New</a>
+                            </div>
+                            <div class="col-lg-10 col-md-10 col-sm-10">
+                                <select class="form-control custom-select" style="display: inline;">
+                                    <option>This treatment (default)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row content-detail">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                           <tr>
+                                <th style="padding-left: 10px; padding-right: 0; white-space: nowrap; max-width: 123px; overflow: hidden; text-overflow: ellipsis;">Appointment Date</th>
+                                <th style="padding-left: 0; padding-right: 0;">Doctor</th>
+                                <th style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 106px; overflow: hidden; text-overflow: ellipsis;">Treatment Name</th>
+                                <th style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 60px; overflow: hidden; text-overflow: ellipsis;">Task List</th>
+                                <th style="padding-left: 0; padding-right: 0;">Notes</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding-right: 0; width: 130px;">10/10/2017 12:00</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Ngoc Anh (long text testing)</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Implant X (long text testing)</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">1.1, 1.2, 1.3 (long text testing)</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 200px; overflow: hidden; text-overflow: ellipsis;"> This is a long note that you have ever seen befored bla bla bla bla bla bla bla bla bla(long text testing)</td>
+                                <td style="min-width: 160px;">
+                                    <a class="btn btn-primary" href="" style="width: 70px;">Onway</a>
+                                    <a class="btn btn-primary" href="" style="width: 70px;">Edit</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-right: 0;">08/10/2017 11:00</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Ngoc Anh</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Implant X</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">1.1, 1.2, 1.3</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 200px; overflow: hidden; text-overflow: ellipsis;">-</td>
+                                <td>
+                                <a class="btn btn-primary" href="" style="width: 70px;">Checked</a>
+                                <a class="btn btn-primary" href="" style="width: 70px;">Edit</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-right: 0;">07/10/2017 12:00</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Ngoc Anh</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Implant X</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">1.1, 1.2, 1.3</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 200px; overflow: hidden; text-overflow: ellipsis;">/* Đã huỷ: Any > Cancel*/</td>
+                                <td>
+                                <a class="btn btn-light" href="" style="width: 70px;">View</a>
+                                <a class="btn btn-primary" href="" style="width: 70px;">Edit</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-right: 0;">06/10/2017 11:00</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Ngoc Anh</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Implant X</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">1.1, 1.2, 1.3</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 200px; overflow: hidden; text-overflow: ellipsis;">/* Đã xong: checked > done*/</td>
+                                <td>
+                                <a class="btn btn-light" href="" style="width: 70px;">View</a>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-right: 0; width: 130px;">10/10/2017 12:00</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Ngoc Anh (long text testing)</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">Implant X (long text testing)</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 80px; overflow: hidden; text-overflow: ellipsis;">1.1, 1.2, 1.3 (long text testing)</td>
+                                <td style="padding-left: 0; padding-right: 0; white-space: nowrap; max-width: 200px; overflow: hidden; text-overflow: ellipsis;"> This is a long note that you have ever seen befored bla bla bla bla bla bla bla bla bla(long text testing)</td>
+                                <td style="min-width: 160px;">
+                                    <a class="btn btn-primary" href="" style="width: 70px;">Active</a>
+                                    <a class="btn btn-primary" href="" style="width: 70px;">Edit</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div></div>
+            </div>
+        </div>
+    </div>
+    <!--Footer -->
+    <footer id="main-footer">
+        <a>Cloud Dental CRM v.1.0.3 (alpha 1) @ 2017. All rights reserved.</a>
+    </footer>
+    <!--- Patient Appointment schedule -->
+    <div class="modal" tabindex="-1" role="dialog" id="omni-dental-patient-app-modal-new">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title">Create new appointment for <b style="color: tomato;">[Mr. Nguyen Quoc Anh]</b></h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div style="border: 1px solid #2196f3; width: 350px; border-radius: 5px; margin: auto;">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link nav-link-l active" data-toggle="pill" href="#Inthistreatment">In this treatment</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-link-r" data-toggle="pill" href="#Innewtreatment">In new treatment</a>
+                            </li>
+                        </ul>
+                    </div><br/>
+                    <!-- Modal Tab panes -->
+                    <div class="tab-content">
+                        <!--tab 1 -->
+                        <div class="tab-pane active container" id="Inthistreatment">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6" id="modal-this-input-lc">
+                                    <div class="row">
+                                        <div class="input-group mb-2 mb-sm-0">
+                                            <div class="input-group-addon"><i class="fa fa-puzzle-piece"></i></div>
+                                            <input type="text" class="form-control" style="" placeholder="Implant X">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-group mb-2 mb-sm-0">
+                                            <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                            <select class="form-control custom-select" id="exampleFormControlSelect1">
+                                               <option>Dr. Ngọc Anh</option>
+                                               <option>Dr. Thien Luong</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-group mb-2 mb-sm-0">
+                                            <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                                            <select class="form-control custom-select" id="exampleFormControlSelect1">
+                                               <option>12/10/2017</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-group mb-2 mb-sm-0">
+                                            <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                                            <select class="form-control custom-select" id="exampleFormControlSelect1">
+                                               <option>Morning</option>
+                                               <option>Afternoon</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <table class="table table-responsive" border="1" id="table1" style="border:1px solid #333; margin-bottom: 5px;">
+                                            <tr>
+                                                <td style="height: 50px;" rel="1"></td>
+                                                <td style="height: 50px;" rel="2"></td>
+                                                <td style="height: 50px;" rel="3"></td>
+                                                <td style="height: 50px;" rel="4"></td>
+                                                <td style="height: 50px;" rel="5"></td>
+                                                <td style="height: 50px;" rel="6"></td>
+                                                <td style="height: 50px;" rel="7"></td>
+                                                <td style="height: 50px;" rel="8"></td>
+                                                <td style="height: 50px;" rel="9"></td>
+                                                <td style="height: 50px;" rel="10"></td>
+                                                <td style="height: 50px;" rel="11"></td>
+                                                <td style="height: 50px;" rel="12"></td>
+                                                <td style="height: 50px;" rel="13"></td>
+                                                <td style="height: 50px;" rel="14"></td>
+                                                <td style="height: 50px;" rel="15"></td>
+                                                <td style="height: 50px;" rel="16"></td>
+                                                <td style="height: 50px;" rel="17"></td>
+                                                <td style="height: 50px;" rel="18"></td>
+                                                <td style="height: 50px;" rel="19"></td>
+                                                <td style="height: 50px;" rel="20"></td>
+                                            </tr>
+                                        </table>
+                                        <div style="font-size: 14px;margin:5px 0;">
+                                            <p>001&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;002</p>
+                                        </div>
+                                        <table class="table table-responsive" border="1" id="table2" style="border:1px solid #333; margin-bottom: 5px;">
+                                            <tr>
+                                                <td style="height: 50px;" rel="1"></td>
+                                                <td style="height: 50px;" rel="2"></td>
+                                                <td style="height: 50px;" rel="3"></td>
+                                                <td style="height: 50px;" rel="4"></td>
+                                                <td style="height: 50px;" rel="5"></td>
+                                                <td style="height: 50px;" rel="6"></td>
+                                                <td style="height: 50px;" rel="7"></td>
+                                                <td style="height: 50px;" rel="8"></td>
+                                                <td style="height: 50px;" rel="9"></td>
+                                                <td style="height: 50px;" rel="10"></td>
+                                                <td style="height: 50px;" rel="11"></td>
+                                                <td style="height: 50px;" rel="12"></td>
+                                                <td style="height: 50px;" rel="13"></td>
+                                                <td style="height: 50px;" rel="14"></td>
+                                                <td style="height: 50px;" rel="15"></td>
+                                                <td style="height: 50px;" rel="16"></td>
+                                                <td style="height: 50px;" rel="17"></td>
+                                                <td style="height: 50px;" rel="18"></td>
+                                                <td style="height: 50px;" rel="19"></td>
+                                                <td style="height: 50px;" rel="20"></td>
+                                            </tr>
+                                        </table>
+                                        <div style="font-size: 14px;margin:5px 0;">
+                                            <p>8am.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9am.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10am.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11am.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12am.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6" id="modal-this-input-rc">
+                                    <div class="row">
+                                        <span style="margin: 10px auto;">Choose the tasks you attend to do in this appointment:</span>
+                                    </div>
+                                    <div class="row">
+                                        <table class="table table-striped table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col"></th>
+                                                    <th scope="col">No.</th>
+                                                    <th scope="col">After</th>
+                                                    <th scope="col">At date</th>
+                                                    <th scope="col">Position</th>
+                                                    <th scope="col">Tasks</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <label class="form-check-label" style="margin-bottom: 20px;">
+                                                            <input type="checkbox" class="form-check-input" value="">
+                                                        </label>
+                                                    </td>
+                                                    <td style="vertical-align: middle;text-align: center;">1.1</td>
+                                                    <td style="vertical-align: middle;text-align: center;">-</td>
+                                                    <td style="vertical-align: middle;text-align: center;">10/10/2017</td>
+                                                    <td style="vertical-align: middle;text-align: center;">41</td>
+                                                    <td style="vertical-align: middle;width:40%;">
+                                                      Nhổ răng
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label class="form-check-label" style="margin-bottom: 20px;">
+                                                            <input type="checkbox" class="form-check-input" value="">
+                                                        </label>
+                                                    </td>
+                                                    <td style="vertical-align: middle;text-align: center;">1.2</td>
+                                                    <td style="vertical-align: middle;text-align: center;">-</td>
+                                                     <td style="vertical-align: middle;text-align: center;">10/10/2017</td>
+                                                    <td style="vertical-align: middle;text-align: center;">UD</td>
+                                                    <td style="vertical-align: middle;width:40%;">
+                                                      Cạo vôi và đánh bóng
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label class="form-check-label" style="margin-bottom: 20px;">
+                                                            <input type="checkbox" class="form-check-input" value="">
+                                                        </label>
+                                                    </td>
+                                                    <td style="vertical-align: middle;text-align: center;">1.3</td>
+                                                    <td style="vertical-align: middle;text-align: center;">-</td>
+                                                    <td style="vertical-align: middle;text-align: center;">10/10/2017</td>
+                                                    <td style="vertical-align: middle;text-align: center;">41</td>
+                                                    <td style="vertical-align: middle;width:40%;">
+                                                      Cắt chỉ
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label class="form-check-label" style="margin-bottom: 20px;">
+                                                            <input type="checkbox" class="form-check-input" value="">
+                                                        </label>
+                                                    </td>
+                                                    <td style="vertical-align: middle;text-align: center;">2.1</td>
+                                                    <td style="vertical-align: middle;text-align: center;">1</td>
+                                                    <td style="vertical-align: middle;text-align: center;">-</td>
+                                                    <td style="vertical-align: middle;text-align: center;">32</td>
+                                                     <td style="vertical-align: middle;width:40%;">
+                                                      xxx
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label class="form-check-label" style="margin-bottom: 20px;">
+                                                            <input type="checkbox" class="form-check-input" value="">
+                                                        </label>
+                                                    </td>
+                                                    <td style="vertical-align: middle;text-align: center;">2.2</td>
+                                                    <td style="vertical-align: middle;text-align: center;">1.1</td>
+                                                    <td style="vertical-align: middle;text-align: center;">-</td>
+                                                    <td style="vertical-align: middle;text-align: center;">32</td>
+                                                    <td style="vertical-align: middle;width:40%;">
+                                                          Implant X
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label class="form-check-label" style="margin-bottom: 20px;">
+                                                            <input type="checkbox" class="form-check-input" value="">
+                                                        </label>
+                                                    </td>
+                                                    <td style="vertical-align: middle;text-align: center;">2.3</td>
+                                                    <td style="vertical-align: middle;text-align: center;">1</td>
+                                                    <td style="vertical-align: middle;text-align: center;">-</td>
+                                                    <td style="vertical-align: middle;text-align: center;">32</td>
+                                                    <td style="vertical-align: middle;width:40%;">
+                                                      xxx
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- Co xoa the /div o day vi thay du thua-->
+                            </div>
+                            <div>
+                                <textarea class="form-control" placeholder="Write your note.."></textarea>
+                            </div>
+                        </div>
+                        <!--tab 2 -->
+                        <div class="tab-pane container" id="Innewtreatment">
+                            <div id="modal-new-input">
+                                <div class="row">
+                                    <div class="input-group mb-2 mb-sm-0">
+                                        <div class="input-group-addon"><i class="fa fa-puzzle-piece"></i></div>
+                                        <input type="text" class="form-control" style="" placeholder="Name of new treatment">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group mb-2 mb-sm-0">
+                                        <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                           <option>Dr. Ngọc Anh</option>
+                                           <option>Dr. Thien Luong</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group mb-2 mb-sm-0">
+                                        <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                           <option>12/10/2017</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-group mb-2 mb-sm-0">
+                                        <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                           <option>Sáng</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <table class="table table-responsive" border="1" id="table1" style="border:1px solid #333; margin-bottom: 5px;">
+                                        <tr>
+                                            <td style="height: 50px;" rel="1"></td>
+                                            <td style="height: 50px;" rel="2"></td>
+                                            <td style="height: 50px;" rel="3"></td>
+                                            <td style="height: 50px;" rel="4"></td>
+                                            <td style="height: 50px;" rel="5"></td>
+                                            <td style="height: 50px;" rel="6"></td>
+                                            <td style="height: 50px;" rel="7"></td>
+                                            <td style="height: 50px;" rel="8"></td>
+                                            <td style="height: 50px;" rel="9"></td>
+                                            <td style="height: 50px;" rel="10"></td>
+                                            <td style="height: 50px;" rel="11"></td>
+                                            <td style="height: 50px;" rel="12"></td>
+                                            <td style="height: 50px;" rel="13"></td>
+                                            <td style="height: 50px;" rel="14"></td>
+                                            <td style="height: 50px;" rel="15"></td>
+                                            <td style="height: 50px;" rel="16"></td>
+                                            <td style="height: 50px;" rel="17"></td>
+                                            <td style="height: 50px;" rel="18"></td>
+                                            <td style="height: 50px;" rel="19"></td>
+                                            <td style="height: 50px;" rel="20"></td>
+                                        </tr>
+                                    </table>
+                                    <div style="font-size: 14px;margin:5px 0;">
+                                        <p>001&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;002</p>
+                                    </div>
+                                    <table class="table table-responsive" border="1" id="table2" style="border:1px solid #333;    margin-bottom: 5px;">
+                                        <tr>
+                                            <td style="height: 50px;" rel="1"></td>
+                                            <td style="height: 50px;" rel="2"></td>
+                                            <td style="height: 50px;" rel="3"></td>
+                                            <td style="height: 50px;" rel="4"></td>
+                                            <td style="height: 50px;" rel="5"></td>
+                                            <td style="height: 50px;" rel="6"></td>
+                                            <td style="height: 50px;" rel="7"></td>
+                                            <td style="height: 50px;" rel="8"></td>
+                                            <td style="height: 50px;" rel="9"></td>
+                                            <td style="height: 50px;" rel="10"></td>
+                                            <td style="height: 50px;" rel="11"></td>
+                                            <td style="height: 50px;" rel="12"></td>
+                                            <td style="height: 50px;" rel="13"></td>
+                                            <td style="height: 50px;" rel="14"></td>
+                                            <td style="height: 50px;" rel="15"></td>
+                                            <td style="height: 50px;" rel="16"></td>
+                                            <td style="height: 50px;" rel="17"></td>
+                                            <td style="height: 50px;" rel="18"></td>
+                                            <td style="height: 50px;" rel="19"></td>
+                                            <td style="height: 50px;" rel="20"></td>
+                                        </tr>
+                                    </table>
+                                    <div style="font-size: 14px;margin:5px 0;">
+                                        <p>8am.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9am.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10am.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11am.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12am.</p>
+                                    </div>
+                                </div>
+                                <!-- Co xoa the /div o day vi thay du thua-->
+                            </div>
+                            <div>
+                                <textarea class="form-control" placeholder="Write your note.."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-lg btn-primary" style="">Save</button>
+                    <a href="#" style="padding-right: 20px;">Cancel this appointment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
